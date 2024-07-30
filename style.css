@@ -1,0 +1,383 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --hoverTextColor:rgb(244, 51, 151);
+    --textColor : rgb(87, 85, 85);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Roboto',sans-serif;
+    color: var(--textColor);
+}
+.header{
+    height: 72px;
+    outline: 1px solid #ccc;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+
+}
+.headerLeft,
+
+.headerRight{
+    display: flex;
+    align-items: center;
+}
+
+.logocontainer{
+    width: 155px;
+
+}
+.logocontainer img {
+    width: 100%;
+    height: auto;
+    padding-right: 10%; 
+}
+
+.SearchInputContainer {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 45px;
+    outline: 1px solid #ccc;
+    margin-right:auto;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+}
+
+.SearchIcon {
+    width: 30px;
+    height:auto;
+    cursor: pointer; 
+}
+.SearchIcon img{
+    width: 100%;
+    height: auto;
+   
+}
+form{
+    width: 100%;
+}
+.InputSearch {
+    flex:1; 
+    height: 100%;
+    border: none; 
+    outline: none; 
+    padding: 0 10px; 
+    font-size: 16px; 
+}
+
+#CloseSearch{
+    display: none;
+}
+
+.searchRecentModel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 45px;
+    height: 400px;
+    width: 100%;
+    display: none;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    z-index: 3;
+}
+
+.SearchInputContainer:focus-within .searchRecentModel{
+    display: block;
+}
+
+.recentItem{
+    display: flex;
+    align-items: center;
+}
+
+.recentIcon img{
+    width: 20px;
+    margin-right: 10px;
+    
+}
+
+
+/* Right part */
+
+.mobileIcon img{
+    width: 25px;
+   margin: 5px;
+}
+
+.downloadContainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+}
+.downloadContainer:hover{
+    color:var(--hoverTextColor);
+    cursor: pointer;
+    z-index: 3;
+}
+.downloadBtn img{
+    width: 180px;
+    display: block;
+    margin-top: 5px;
+}
+
+.downloadHoverBtnContainer{
+    position: absolute;
+    bottom: 0;
+    top: 40px;
+    width: 200px;
+    display: none;
+    background-color: white;
+    height: 200px;
+    padding: 10px;
+    margin-left: -30px;
+    color: var(--textColor);
+}
+
+.downloadContainer:hover .downloadHoverBtnContainer,
+.downloadContainer:focus .downloadHoverBtnContainer{
+    display: block;
+}
+
+.downloadContainer p{
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+.profileAndCart{
+    display: flex;
+    align-items: center;
+}
+.profileAndCart:hover,
+.profileAndCart:focus{
+    color: var(--hoverTextColor);
+}
+
+.profileIcon img,
+.cartIcon img{
+    width: 25px;
+   margin: 5px;
+}
+.profileAndCart p{
+    margin: 0;
+    padding: 0;
+}
+.profileContainer, .cartContainer{
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.becomeSellerContainer{
+    padding: 0px 20px;
+    border-left: 1.5px solid #ccc;
+    border-right: 1.5px solid #ccc;
+    font-size: 17px;
+
+}
+
+/* navigation Bar */
+
+nav{
+    /* background-color: red; */
+    height: 54px;
+    width: 100%;
+    border-bottom: 1px solid #ccc
+  }
+
+nav ul{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0px 10px;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    
+}
+nav ul li{
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid transparent ;
+    cursor: pointer;
+    
+}
+
+nav ul li:hover{
+    color: var(--hoverTextColor);
+    border-bottom: 4px solid var(--hoverTextColor);
+
+}
+
+/* SubMenu */
+.subMenu{
+    position: absolute;
+    /* height: 400px; */
+    top: 51px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: none;
+    margin: 0px 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+nav ul li:hover .subMenu{
+    display: block;
+}
+
+.subMenu p{
+    color:var(--textColor);
+}
+.submenuList{
+    display: flex;
+
+}
+.column{
+    margin-right: 40px;
+}
+
+/* lowest price */
+
+.lowestpriceContainer{
+    display: flex;
+    margin: 50px auto;
+    max-width: 1100px;
+}    
+.lowestPrice_text{
+    width: 50%;
+    padding: 25px 0 0 25px;
+}
+.lowestPrice_image{
+    width: 50%;
+}
+.lowestPrice_icon{
+    width: 30px;
+    border-radius: 40px;
+    background-color: aqua;
+}
+.lowestPriceWhay{
+    display:flex ;
+    height: 50px;
+    margin-top: 20px 0;
+}
+.lowestPriceItem{
+    padding-right: 0 30px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    border-right: 2px solid #ccc;
+}
+.lowestPriceItem p{
+    padding-left: 10px;
+}
+.downloadApp_contianer{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    height: 50px;
+    background-color:var(--hoverTextColor) ;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: white;
+
+}
+.downloadApp_contianer p{
+    padding: 0px 20px;
+}
+
+/* Top category to choose from */
+.topCategoriesForm{
+    width: 1100px;
+    margin: auto;
+}
+.topcategoriesHeading{
+    display: flex;
+    align-items: center;
+}
+.horizontalLine{
+    padding: 1px;
+    background-color: var(--hoverTextColor);
+    width: 50%;
+    margin-right: 2px;
+}
+.topcategoriesHeading h1{
+    width: max-content;
+    width: 1050px;
+    color: black;
+    font-size: 38px;
+    margin: 0;
+}
+.topCategoriesImage{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://images.meesho.com/images/marketing/1704720332049_1200.webp");
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    display: flex;
+    align-items:flex-end ;
+    padding: 30px;
+}
+.topCategoryisImage img{
+    margin: 5px;
+    bottom: 0;
+    max-width: 300px;
+    
+}
+.topCategoryisImage img:first-child{
+    max-width: 400px;
+   
+}
+
+/* Essential colomn */
+.essentialContainer{
+    width: 100%;
+    height: 500px;
+    background-color: 400px;
+    margin-top: 50px;
+    background-image: url("https://images.meesho.com/images/marketing/1704720392370_1200.webp");
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+
+.essentialContainer img{
+   max-width: 180px;
+}
+
+.essential_items{
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.essen-btn{
+    margin-left: 100px;
+    margin-top: 20px;
+}
